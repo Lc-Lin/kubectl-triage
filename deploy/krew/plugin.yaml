@@ -31,6 +31,30 @@ spec:
     bin: "kubectl-triage"
   - selector:
       matchLabels:
+        os: darwin
+        arch: arm64
+    uri: https://github.com/Lc-Lin/kubectl-triage/releases/download/v0.1.1/kubectl-triage_darwin_arm64.tar.gz
+    sha256: "PLACEHOLDER_SHA256_DARWIN_ARM64"
+    files:
+    - from: "kubectl-triage"
+      to: "."
+    - from: LICENSE
+      to: "."
+    bin: "kubectl-triage"
+  - selector:
+      matchLabels:
+        os: linux
+        arch: arm64
+    uri: https://github.com/Lc-Lin/kubectl-triage/releases/download/v0.1.1/kubectl-triage_linux_arm64.tar.gz
+    sha256: "PLACEHOLDER_SHA256_LINUX_ARM64"
+    files:
+    - from: "kubectl-triage"
+      to: "."
+    - from: LICENSE
+      to: "."
+    bin: "kubectl-triage"
+  - selector:
+      matchLabels:
         os: windows
         arch: amd64
     uri: https://github.com/Lc-Lin/kubectl-triage/releases/download/v0.1.1/kubectl-triage_windows_amd64.zip
